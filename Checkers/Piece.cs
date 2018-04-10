@@ -6,25 +6,29 @@ namespace Checkers
 {
     public class Piece : IPiece
     {
-        public Status Status => throw new NotImplementedException();
+        public virtual Status Status => throw new NotImplementedException();
 
-        public Color Color => throw new NotImplementedException();
+        public virtual Color Color => throw new NotImplementedException();
 
-        public int Position => throw new NotImplementedException();
+        public virtual int Position => throw new NotImplementedException();
 
-        public IEnumerable<int> CapturingMoves(IBoard board)
+        public virtual IEnumerable<int> CapturingMoves(IBoard board)
         {
             throw new NotImplementedException();
         }
 
-        public void Move(int destination)
+        public virtual void Move(int destination)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<int> NormalMoves(IBoard board)
+        public virtual IEnumerable<int> NormalMoves(IBoard board)
         {
             throw new NotImplementedException();
         }
+    }
+
+    public class King : Piece
+    {
     }
 }
